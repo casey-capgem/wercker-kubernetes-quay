@@ -29,7 +29,7 @@ deploy:
     - internal/docker-scratch-push:
         username: _json_key
         password: $GCR_JSON_KEY_FILE
-        repository: eu.gcr.io/test/c-test
+        repository: eu.gcr.io/analytical-rain-151012/c-test
         registry: https://gcr.io
 
     # Run this to create the rc and service
