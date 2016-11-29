@@ -33,7 +33,7 @@ deploy:
         registry: https://gcr.io
 
     # Run this to create the rc and service
-    initialize:
+initialize:
     - kubectl:
         server: $KUBERNETES_MASTER
         username: $KUBERNETES_USERNAME
@@ -49,7 +49,7 @@ deploy:
         command: create -f cities-service.json
 
     # Update the replica controller to $WERCKER_GIT_COMMIT
-    rolling-update:
+rolling-update:
     - kubectl:
         server: $KUBERNETES_MASTER
         username: $KUBERNETES_USERNAME
