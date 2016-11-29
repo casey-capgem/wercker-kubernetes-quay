@@ -33,7 +33,7 @@ deploy:
         registry: https://gcr.io
 
     # Run this to create the rc and service
-initialize:
+    initialize:
     - kubectl:
         server: $KUBERNETES_MASTER
         username: $KUBERNETES_USERNAME
@@ -49,11 +49,11 @@ initialize:
         command: create -f cities-service.json
 
     # Update the replica controller to $WERCKER_GIT_COMMIT
-rolling-update:
+    rolling-update:
     - kubectl:
         server: $KUBERNETES_MASTER
         username: $KUBERNETES_USERNAME
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: rolling-update cities
-        image: quay.io/wercker/wercker-kubernetes-quay:$WERCKER_GIT_COMMIT
+        image: eu.gcr.io/analytical-rain-151012/c-test:$WERCKER_GIT_COMMIT
