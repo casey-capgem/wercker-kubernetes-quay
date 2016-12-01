@@ -1,6 +1,6 @@
 {
    "kind": "Service",
-   "apiVersion": "v1beta3",
+   "apiVersion": "apps/v1alpha1",
    "metadata": {
       "name": "cities",
       "labels": {
