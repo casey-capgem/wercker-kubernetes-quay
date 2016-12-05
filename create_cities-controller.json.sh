@@ -35,7 +35,7 @@ cat > cities-controller.json <<EOF
                 "protocol": "TCP"
               }
             ],
-            command: [ "echo", "SUCCESS" ]
+            "command": [ "echo", "SUCCESS" ]
           }
         ]
       }
