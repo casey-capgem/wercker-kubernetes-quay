@@ -26,7 +26,7 @@ cat > cities-controller.json <<EOF
         "containers": [
           {
             "imagePullPolicy": "Always",
-            "image": "quay.io/wercker/wercker-kubernetes-quay:${WERCKER_GIT_COMMIT}",
+            "image": "c-test",
             "name": "cities",
             "ports": [
               {
@@ -34,7 +34,8 @@ cat > cities-controller.json <<EOF
                 "containerPort": 5000,
                 "protocol": "TCP"
               }
-            ]
+            ],
+            command: [ "echo", "SUCCESS" ]
           }
         ]
       }
