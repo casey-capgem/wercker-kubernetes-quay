@@ -29,7 +29,7 @@ deploy:
     - internal/docker-scratch-push:
         username: _json_key
         password: $GCR_JSON_KEY_FILE
-        repository: eu.gcr.io/analytical-rain-151012/c-test
+        repository: $GCR_REPO_IMAGE
         registry: https://gcr.io
 
     # Run this to create the rc and service
@@ -56,4 +56,4 @@ deploy:
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
         command: rolling-update cities
-        image: eu.gcr.io/analytical-rain-151012/c-test:$WERCKER_GIT_COMMIT
+        image: $GCR_REPO_IMAGE:$WERCKER_GIT_COMMIT
