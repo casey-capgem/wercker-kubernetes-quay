@@ -34,8 +34,7 @@ cat > cities-controller.json <<EOF
                 "containerPort": 80,
                 "protocol": "TCP"
               }
-            ],
-            "command": [ "echo", "SUCCESS" ]
+            ]
           }
         ]
       }
