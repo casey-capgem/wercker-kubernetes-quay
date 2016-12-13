@@ -26,12 +26,12 @@ cat > cities-controller.json <<EOF
         "containers": [
           {
             "imagePullPolicy": "Always",
-            "image": "eu.gcr.io/analytical-rain-151012/c-test",
+            "image": "emilevauge/whoami",
             "name": "cities",
             "ports": [
               {
                 "name": "http-server",
-                "containerPort": 5000,
+                "containerPort": 80,
                 "protocol": "TCP"
               }
             ],
