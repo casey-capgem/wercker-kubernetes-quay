@@ -19,14 +19,14 @@ cat > cities-controller.json <<EOF
       "metadata": {
         "labels": {
           "name": "cities",
-          "deployment": "${WERCKER_GIT_COMMIT}"
+          "deployment": "latest"
         }
       },
       "spec": {
         "containers": [
           {
             "imagePullPolicy": "Always",
-            "image": "${GCR_REPO_IMAGE}:latest",
+            "image": "eu.gcr.io/analytical-rain-151012/c-test:latest",
             "name": "cities",
             "ports": [
               {
