@@ -26,7 +26,7 @@ cat > cities-controller.json <<EOF
         "containers": [
           {
             "imagePullPolicy": "Always",
-            "image": "eu.gcr.io/analytical-rain-151012/c-test:latest",
+            "image": "${GCR_REPO_IMAGE}:latest",
             "name": "cities",
             "ports": [
               {
